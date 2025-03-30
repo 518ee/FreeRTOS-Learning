@@ -1,0 +1,20 @@
+CMakeFiles\freertos-demo2_0.elf.dir\Core\Src\sysmem.c.obj: \
+ D:\code\CLionProject\stm32Projects\freertos-demo2_0\Core\Src\sysmem.c \
+ d:\rj\armgnu~1\112_20~1.02\arm-none-eabi\include\errno.h \
+ d:\rj\armgnu~1\112_20~1.02\arm-none-eabi\include\sys\errno.h \
+ d:\rj\armgnu~1\112_20~1.02\arm-none-eabi\include\sys\reent.h \
+ d:\rj\armgnu~1\112_20~1.02\arm-none-eabi\include\_ansi.h \
+ d:\rj\armgnu~1\112_20~1.02\arm-none-eabi\include\newlib.h \
+ d:\rj\armgnu~1\112_20~1.02\arm-none-eabi\include\_newlib_version.h \
+ d:\rj\armgnu~1\112_20~1.02\arm-none-eabi\include\sys\config.h \
+ d:\rj\armgnu~1\112_20~1.02\arm-none-eabi\include\machine\ieeefp.h \
+ d:\rj\armgnu~1\112_20~1.02\arm-none-eabi\include\sys\features.h \
+ d:\rj\armgnu~1\112_20~1.02\lib\gcc\arm-none-eabi\11.2.1\include\stddef.h \
+ d:\rj\armgnu~1\112_20~1.02\arm-none-eabi\include\sys\_types.h \
+ d:\rj\armgnu~1\112_20~1.02\arm-none-eabi\include\machine\_types.h \
+ d:\rj\armgnu~1\112_20~1.02\arm-none-eabi\include\machine\_default_types.h \
+ d:\rj\armgnu~1\112_20~1.02\arm-none-eabi\include\sys\lock.h \
+ d:\rj\armgnu~1\112_20~1.02\lib\gcc\arm-none-eabi\11.2.1\include\stdint.h \
+ d:\rj\armgnu~1\112_20~1.02\arm-none-eabi\include\stdint.h \
+ d:\rj\armgnu~1\112_20~1.02\arm-none-eabi\include\sys\_intsup.h \
+ d:\rj\armgnu~1\112_20~1.02\arm-none-eabi\include\sys\_stdint.h

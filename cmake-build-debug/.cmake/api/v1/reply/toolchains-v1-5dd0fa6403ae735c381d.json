@@ -1,0 +1,91 @@
+{
+	"kind" : "toolchains",
+	"toolchains" : 
+	[
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : {},
+				"path" : "D:/RJ/Arm GNU Toolchain arm-none-eabi/11.2_2022.02/bin/arm-none-eabi-gcc.exe",
+				"version" : ""
+			},
+			"language" : "ASM",
+			"sourceFileExtensions" : 
+			[
+				"s",
+				"S",
+				"asm"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"D:/RJ/Arm GNU Toolchain arm-none-eabi/11.2_2022.02/lib/gcc/arm-none-eabi/11.2.1/include",
+						"D:/RJ/Arm GNU Toolchain arm-none-eabi/11.2_2022.02/lib/gcc/arm-none-eabi/11.2.1/include-fixed",
+						"D:/RJ/Arm GNU Toolchain arm-none-eabi/11.2_2022.02/arm-none-eabi/include"
+					],
+					"linkDirectories" : [],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : []
+				},
+				"path" : "D:/RJ/Arm GNU Toolchain arm-none-eabi/11.2_2022.02/bin/arm-none-eabi-gcc.exe",
+				"version" : "11.2.1"
+			},
+			"language" : "C",
+			"sourceFileExtensions" : 
+			[
+				"c",
+				"m"
+			]
+		},
+		{
+			"compiler" : 
+			{
+				"id" : "GNU",
+				"implicit" : 
+				{
+					"includeDirectories" : 
+					[
+						"D:/RJ/Arm GNU Toolchain arm-none-eabi/11.2_2022.02/arm-none-eabi/include/c++/11.2.1",
+						"D:/RJ/Arm GNU Toolchain arm-none-eabi/11.2_2022.02/arm-none-eabi/include/c++/11.2.1/arm-none-eabi",
+						"D:/RJ/Arm GNU Toolchain arm-none-eabi/11.2_2022.02/arm-none-eabi/include/c++/11.2.1/backward",
+						"D:/RJ/Arm GNU Toolchain arm-none-eabi/11.2_2022.02/lib/gcc/arm-none-eabi/11.2.1/include",
+						"D:/RJ/Arm GNU Toolchain arm-none-eabi/11.2_2022.02/lib/gcc/arm-none-eabi/11.2.1/include-fixed",
+						"D:/RJ/Arm GNU Toolchain arm-none-eabi/11.2_2022.02/arm-none-eabi/include"
+					],
+					"linkDirectories" : [],
+					"linkFrameworkDirectories" : [],
+					"linkLibraries" : []
+				},
+				"path" : "D:/RJ/Arm GNU Toolchain arm-none-eabi/11.2_2022.02/bin/arm-none-eabi-g++.exe",
+				"version" : "11.2.1"
+			},
+			"language" : "CXX",
+			"sourceFileExtensions" : 
+			[
+				"C",
+				"M",
+				"c++",
+				"cc",
+				"cpp",
+				"cxx",
+				"mm",
+				"mpp",
+				"CPP",
+				"ixx",
+				"cppm"
+			]
+		}
+	],
+	"version" : 
+	{
+		"major" : 1,
+		"minor" : 0
+	}
+}
