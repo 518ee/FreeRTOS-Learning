@@ -96,7 +96,7 @@ to exclude the API function. */
  /* __BVIC_PRIO_BITS will be specified when CMSIS is being used. */
  #define configPRIO_BITS         __NVIC_PRIO_BITS
 #else
- #define configPRIO_BITS         4
+ #define configPRIO_BITS         3
 #endif
 
 /* The lowest interrupt priority that can be used in a call to a "set priority"
@@ -134,6 +134,7 @@ standard names. */
 
 /* USER CODE BEGIN Defines */
 /* Section where parameter definitions can be added (for instance, to override default ones in FreeRTOS.h) */
+#define INCLUDE_uxTaskGetStackHighWaterMark 1
 /* USER CODE END Defines */
 
 #endif /* FREERTOS_CONFIG_H */

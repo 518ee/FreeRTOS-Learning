@@ -25,7 +25,9 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "stdio.h"
+#include "../../Hardware/Inc/key.h"
+#include "../../Hardware/Inc/led.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -106,15 +108,15 @@ void MX_FREERTOS_Init(void) {
 
   /* Create the thread(s) */
   /* definition and creation of defaultTask */
-  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 128);
+  osThreadDef(defaultTask, StartDefaultTask, osPriorityNormal, 0, 200);
   defaultTaskHandle = osThreadCreate(osThread(defaultTask), NULL);
 
   /* definition and creation of myTask02 */
-  osThreadDef(myTask02, StartTask02, osPriorityNormal, 0, 128);
+  osThreadDef(myTask02, StartTask02, osPriorityNormal, 0, 200);
   myTask02Handle = osThreadCreate(osThread(myTask02), NULL);
 
   /* definition and creation of myTask03 */
-  osThreadDef(myTask03, StartTask03, osPriorityNormal, 0, 128);
+  osThreadDef(myTask03, StartTask03, osPriorityNormal, 0, 256);
   myTask03Handle = osThreadCreate(osThread(myTask03), NULL);
 
   /* USER CODE BEGIN RTOS_THREADS */
@@ -136,7 +138,8 @@ void StartDefaultTask(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+      printf("task1 running");
+    osDelay(500);
   }
   /* USER CODE END StartDefaultTask */
 }
@@ -154,7 +157,8 @@ void StartTask02(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+      printf("task2 running");
+    osDelay(500);
   }
   /* USER CODE END StartTask02 */
 }
@@ -172,7 +176,36 @@ void StartTask03(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+      if(KEY0 == 1)
+      {
+          vTaskSuspend(defaultTaskHandle);
+          printf(">>>Suspend task1");
+          UBaseType_t stack_remain = uxTaskGetStackHighWaterMark(NULL);
+          printf("stack_remain: ", stack_remain);
+          uint8_t tcb = (uint8_t)sizeof(StaticTask_t);
+          uint8_t stack_ = (uint8_t)sizeof(StackType_t);
+          printf("memory: ", (tcb + 200 * stack_) * 2 + (tcb + 256 * stack_));
+//          osDelay(500);
+//          vTaskResume(defaultTaskHandle);
+//          printf("<<<Resume task1");
+      }
+      else if(KEY1 == 1)
+      {
+          vTaskResume(defaultTaskHandle);
+          printf("<<<Resume task1");
+      }
+//      else if(KEY2 == 1)
+//      {
+//          vTaskSuspendAll();
+//          printf("<<<Suspend all");
+//      }
+//      else if(KEY3 == 1)
+//      {
+//          xTaskResumeAll();
+//          printf(">>>Resume all");
+//      }
+
+      osDelay(500);
   }
   /* USER CODE END StartTask03 */
 }
